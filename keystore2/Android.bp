@@ -68,6 +68,8 @@ rust_defaults {
 rust_library {
     name: "libkeystore2",
     defaults: ["libkeystore2_defaults"],
+
+    ld_flags: ["-Wl,--no-fatal-warnings"],
 }
 
 rust_library {
@@ -141,6 +143,8 @@ rust_binary {
         "libstatspull",
         "libstatssocket",
     ],
+
+    ld_flags: ["-Wl,--no-fatal-warnings"],
 
     vintf_fragments: ["android.system.keystore2-service.xml"],
 
